@@ -43,7 +43,6 @@ export default class MemoryFoam extends Component {
     const h = cookie[`mf-h-${this.props.id}`];
     return {
       styles: {
-        backgroundColor: "red",
         display: "block",
         width: w + "px",
         height: h + "px"

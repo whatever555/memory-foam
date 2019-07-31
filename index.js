@@ -69,7 +69,7 @@ function (_Component) {
     key: "convertCookieToJSON",
     value: function convertCookieToJSON(cookie) {
       var output = {};
-      if (typeof cookie === 'undefined') return {};
+      if (typeof cookie === "undefined") return {};
       cookie.split(/\s*;\s*/).forEach(function (pair) {
         pair = pair.split(/\s*=\s*/);
         output[pair[0]] = pair.splice(1).join("=");
@@ -85,7 +85,6 @@ function (_Component) {
       var h = cookie["mf-h-".concat(this.props.id)];
       return {
         styles: {
-          backgroundColor: "red",
           display: "block",
           width: w + "px",
           height: h + "px"
