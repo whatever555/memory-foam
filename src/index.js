@@ -63,7 +63,7 @@ export default class MemoryFoam extends Component {
   render() {
     const { styles } = this.state;
     return (
-      <span ref={this.myInput} style={styles}>
+      <span class="rar" ref={this.myInput} style={styles}>
         {this.props.children}
       </span>
     );
