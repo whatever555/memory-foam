@@ -59,6 +59,12 @@ function (_Component) {
         attributes: true
       };
       observer.observe(this.myInput.current, config);
+      this.setState({
+        styles: {
+          w: 'initial',
+          h: 'initial'
+        }
+      });
     }
   }, {
     key: "componentDidUpdate",
@@ -69,7 +75,7 @@ function (_Component) {
     key: "convertCookieToJSON",
     value: function convertCookieToJSON(cookie) {
       var output = {};
-      if (typeof cookie === "undefined") return {};
+      if (typeof cookie === "undefined" || !cookie.length > 0) return {};
       cookie.split(/\s*;\s*/).forEach(function (pair) {
         pair = pair.split(/\s*=\s*/);
         output[pair[0]] = pair.splice(1).join("=");
@@ -106,7 +112,7 @@ function (_Component) {
     key: "render",
     value: function render() {
       var styles = this.state.styles;
-      return _react["default"].createElement("span", {
+      return _react["default"].createElement("div", {
         ref: this.myInput,
         style: styles
       }, this.props.children);

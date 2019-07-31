@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 var Cookies = require("js-cookie");
 
 export default class MemoryFoam extends Component {
@@ -21,6 +22,7 @@ export default class MemoryFoam extends Component {
       attributes: true
     };
     observer.observe(this.myInput.current, config);
+    this.setState({styles:{w:'initial', h:'initial'}})
   }
   componentDidUpdate() {
     this.storeMe();
@@ -28,7 +30,7 @@ export default class MemoryFoam extends Component {
 
   convertCookieToJSON(cookie) {
     var output = {};
-    if (typeof cookie === "undefined") return {};
+    if (typeof cookie === "undefined" || !cookie.length > 0) return {};
     cookie.split(/\s*;\s*/).forEach(function(pair) {
       pair = pair.split(/\s*=\s*/);
       output[pair[0]] = pair.splice(1).join("=");
@@ -63,9 +65,9 @@ export default class MemoryFoam extends Component {
   render() {
     const { styles } = this.state;
     return (
-      <span class="rar" ref={this.myInput} style={styles}>
+      <div ref={this.myInput} style={styles}>
         {this.props.children}
-      </span>
+      </div>
     );
   }
 }
