@@ -41,8 +41,8 @@ export default class MemoryFoam extends Component {
 
   getMyShizzle() {
     const cookie = this.convertCookieToJSON(this.props.cookies);
-    const w = cookie[`mf-w-${this.props.id}`];
-    const h = cookie[`mf-h-${this.props.id}`];
+    const w = cookie[`mf-w-${this.props.mid}`];
+    const h = cookie[`mf-h-${this.props.mid}`];
     return {
       styles: {
         display: "block",

@@ -87,8 +87,8 @@ function (_Component) {
     key: "getMyShizzle",
     value: function getMyShizzle() {
       var cookie = this.convertCookieToJSON(this.props.cookies);
-      var w = cookie["mf-w-".concat(this.props.id)];
-      var h = cookie["mf-h-".concat(this.props.id)];
+      var w = cookie["mf-w-".concat(this.props.mid)];
+      var h = cookie["mf-h-".concat(this.props.mid)];
       return {
         styles: {
           display: "block",
