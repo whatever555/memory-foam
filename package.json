@@ -1,6 +1,6 @@
 {
   "name": "memory-foam",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "No more jumpy elements!",
   "main": "index.js",
   "scripts": {

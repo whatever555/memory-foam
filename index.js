@@ -104,8 +104,8 @@ function (_Component) {
       var h = this.myInput.current.offsetHeight;
 
       if (w > 0 && h > 0) {
-        Cookies.set("mf-w-".concat(this.props.id), w);
-        Cookies.set("mf-h-".concat(this.props.id), h);
+        Cookies.set("mf-w-".concat(this.props.mid), w);
+        Cookies.set("mf-h-".concat(this.props.mid), h);
       }
     }
   }, {

@@ -57,8 +57,8 @@ export default class MemoryFoam extends Component {
     const h = this.myInput.current.offsetHeight;
 
     if (w > 0 && h > 0) {
-      Cookies.set(`mf-w-${this.props.id}`, w);
-      Cookies.set(`mf-h-${this.props.id}`, h);
+      Cookies.set(`mf-w-${this.props.mid}`, w);
+      Cookies.set(`mf-h-${this.props.mid}`, h);
     }
   }
 
