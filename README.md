@@ -1,5 +1,7 @@
+![banana](https://i.imgur.com/5BNurvO.jpg)
+
 # Memory Foam 
-Prevent jumpy divs when loading asyncronous content
+Prevent jumpy divs when loading asyncronous content.
 
 # Usage
 Import the memory foam component. 
