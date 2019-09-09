@@ -11,6 +11,7 @@ node('node') {
          env.NODE_ENV = "production"
          print "Environment will be : ${env.NODE_ENV}"
          sh 'node -v'
+
          sh 'npm install yarn'
          //sh 'npm prune'
          sh 'yarn install'
