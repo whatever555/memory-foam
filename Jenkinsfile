@@ -14,22 +14,17 @@ node('node') {
          sh 'npm install yarn'
          //sh 'npm prune'
          sh 'yarn install'
-
        }
 
        stage('Deploy'){
-
         echo "Deployment active. please stand clear"
          //echo 'Push to Repo'
          //sh './dockerPushToRepo.sh'
-
          //echo 'ssh to web server and tell it to pull new image'
          //sh 'ssh deploy@xxxxx.xxxxx.com running/xxxxxxx/dockerRun.sh'
-
        }
 
        stage('Cleanup'){
-
          //echo 'prune and cleanup'
          //sh 'npm prune'
          //sh 'rm node_modules -rf'
