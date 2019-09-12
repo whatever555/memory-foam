@@ -26,6 +26,17 @@ node('node') {
          //sh 'ssh deploy@xxxxx.xxxxx.com running/xxxxxxx/dockerRun.sh'
        }
 
+
+
+        masterBranch('Publish') {
+          echo 'Publishing..'
+          withCredentials([usernamePassword(credentialsId: 'donedeal-builduser', passwordVariable: 'GITHUB_TOKEN', usernameVariable: 'GITHUB_USER')]) {
+            sh 'npx semantic-release --dry-run'
+          }
+          notifyBuild('OK', 'No script to publish')
+        }
+
+
        stage('Cleanup'){
          //echo 'prune and cleanup'
          //sh 'npm prune'
