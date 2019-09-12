@@ -30,7 +30,7 @@ node('node') {
 
         masterBranch('Publish') {
           echo 'Publishing..'
-          withCredentials([usernamePassword(credentialsId: 'donedeal-builduser', passwordVariable: 'GITHUB_TOKEN', usernameVariable: 'GITHUB_USER')]) {
+          withCredentials([usernamePassword(credentialsId: 'whatever555', passwordVariable: 'GITHUB_TOKEN', usernameVariable: 'GITHUB_USER')]) {
             sh 'npx semantic-release --dry-run'
           }
           notifyBuild('OK', 'No script to publish')
