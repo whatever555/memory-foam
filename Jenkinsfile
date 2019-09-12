@@ -23,7 +23,7 @@ node('node') {
 
 
 
-        masterBranch('Publish') {
+        stage('Publish') {
           echo 'Publishing..'
           withCredentials([usernamePassword(credentialsId: 'whatever555', passwordVariable: 'GITHUB_TOKEN', usernameVariable: 'GITHUB_USER')]) {
             sh 'npx semantic-release --dry-run'
