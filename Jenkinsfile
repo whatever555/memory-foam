@@ -19,11 +19,6 @@ node('node') {
 
        stage('Deploy'){
         echo "Deployment active. please stand clear"
-
-         //echo 'Push to Repo'
-         //sh './dockerPushToRepo.sh'
-         //echo 'ssh to web server and tell it to pull new image'
-         //sh 'ssh deploy@xxxxx.xxxxx.com running/xxxxxxx/dockerRun.sh'
        }
 
 
