@@ -16,4 +16,5 @@ Wrap your "jumpy" component in your `<MemoryFoam>` and pass a unique `mid` and y
   
 ```
     
-That's it!
+That's it! 
+
