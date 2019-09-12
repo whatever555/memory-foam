@@ -10,6 +10,16 @@
     "build": "./node_modules/.bin/babel src --out-file index.js",
     "semantic-release": "semantic-release"
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/whatever555/memory-foam.git"
@@ -34,6 +44,9 @@
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "husky": "^3.0.5",
     "react": "^16.6.1",
     "react-dom": "^16.6.3",
     "semantic-release": "^15.13.24"
