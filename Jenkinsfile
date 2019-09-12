@@ -19,16 +19,11 @@ node('node') {
 
        stage('Deploy'){
         echo "Deployment active. please stand clear"
-
-         //echo 'Push to Repo'
-         //sh './dockerPushToRepo.sh'
-         //echo 'ssh to web server and tell it to pull new image'
-         //sh 'ssh deploy@xxxxx.xxxxx.com running/xxxxxxx/dockerRun.sh'
        }
 
 
 
-        masterBranch('Publish') {
+        stage('Publish') {
           echo 'Publishing..'
           withCredentials([usernamePassword(credentialsId: 'whatever555', passwordVariable: 'GITHUB_TOKEN', usernameVariable: 'GITHUB_USER')]) {
             sh 'npx semantic-release --dry-run'
